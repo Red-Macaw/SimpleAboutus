@@ -3,7 +3,7 @@ function openPopup(role) {
     const popupBody = document.getElementById('popup-body');
     const container = document.querySelector('.container');
 
-    // Set content based on role
+    
     if (role === 'secretary') {
         popupBody.innerHTML = `
             <h2>Our Secretary</h2>
@@ -36,7 +36,6 @@ function openPopup(role) {
         `;
     }
 
-    // Show popup and blur the background
     popup.style.display = 'flex';
     container.classList.add('blur');
 }
@@ -45,12 +44,10 @@ function closePopup() {
     const popup = document.getElementById('popup');
     const container = document.querySelector('.container');
 
-    // Hide popup and remove blur
     popup.style.display = 'none';
     container.classList.remove('blur');
 }
 
-// Close popup when clicking outside of it
 document.addEventListener('click', function(event) {
     const popup = document.getElementById('popup');
     const popupContent = document.querySelector('.popup-content');
